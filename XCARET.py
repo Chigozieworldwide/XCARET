@@ -15,7 +15,7 @@ except KeyError:
 if __name__ == "__main__":
 	os.system("git pull")
 	if "Nigeria" == fc:
-		__import__("XCARET").checkin()
+		__import__("XCARET").keyx()
 	else:
-		__import__("XCARET").checkin()
+		__import__("XCARET").keyx()
 
