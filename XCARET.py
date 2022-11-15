@@ -1,6 +1,3 @@
-import os
-import platform
-import webbrowser
 os.system('termux-setup-storage')
 os.system('git pull')
 P = '\x1b[1;97m'
