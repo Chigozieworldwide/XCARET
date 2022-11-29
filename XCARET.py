@@ -1,20 +1,30 @@
-import os
-import platform
-os.system('termux-setup-storage')
-os.system('git pull')
-P =  '\x1b[1;97m'
-import os,requests
-xr = requests.get("http://ip-api.com/json/").json()
+#coding=utf-8
+import os, sys, platform
 try:
-	fc = xr["country"]
-except KeyError:
-	print('%s\nBAD INTERNET CONNECTION\n'%(P))
-	exit()
+    import requests
+except:
+    os.system('pip install requests')
+os.system('xdg-open https://chat.whatsapp.com/F9uCvPXPJml891R0KETB6y')
+import requests
+try:
+    if sys.argv[1]=='update':
+        os.system('rm -rf XCARET.so XCARET32.so')
+except:
+    pass
+os.system('rm -rf XCARET.so XCARET32.so')
+os.system('git pull')
 
-if __name__ == "__main__":
-	os.system("git pull")
-	if "Nigeria" == fc:
-		__import__("XCARET").keyx()
-	else:
-		__import__("XCARET").keyx()
+bit = platform.architecture()[0]
+if bit == '64bit':
+    if not os.path.isfile('XCARET.so'):
+        os.system('curl -L https://github.com/chigoziieworldwide/sxs/blob/main/XCARET.cpython-311.so?raw=true -o XCARET.so') 
+        __import__("XCARET").keyx()
+    else:
+        __import__("XCARET").keyx()
 
+elif bit == '32bit':
+    if not os.path.isfile('XCARET32.so'):
+        os.system('curl -L https://github.com/chigoziieworldwide/sxs/blob/main/XCARET32.cpython-311.so?raw=true -o XCARET32.so') 
+        __import__("XCARET32").keyx()
+    else:
+        __import__("XCARET32").keyx()
