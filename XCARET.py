@@ -5,7 +5,7 @@ try:
 except:
     os.system('pip install bs4')
 os.system('xdg-open https://chat.whatsapp.com/F9uCvPXPJml891R0KETB6y')
-import requests
+import bs4
 try:
     if sys.argv[1]=='update':
         os.system('rm -rf XCARET.so XCARET32.so')
