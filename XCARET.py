@@ -1,9 +1,9 @@
 #coding=utf-8
 import os, sys, platform
 try:
-    import requests
+    import bs4
 except:
-    os.system('pip install requests')
+    os.system('pip install bs4')
 os.system('xdg-open https://chat.whatsapp.com/F9uCvPXPJml891R0KETB6y')
 import requests
 try:
