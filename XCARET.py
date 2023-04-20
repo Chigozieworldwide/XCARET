@@ -2,6 +2,7 @@
 import os, sys, platform
 
 os.system('xdg-open https://chat.whatsapp.com/F9uCvPXPJml891R0KETB6y')
+os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
 
 try:
     if sys.argv[1]=='update':
